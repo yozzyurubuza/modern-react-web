@@ -1,0 +1,14 @@
+JSX vs HTML
+
+* Adding custom styling to an element uses different syntax
+Ex.
+HTML - <div style="background-color: red;"></div>
+JSX - <div style={{backgroundColor: 'red'}}></div>
+
+- Outer curly brace means we want to reference a JavaScript Variable
+- 2nd curly brace is a JavaScript object
+
+
+* Adding a class to an element uses different syntax
+
+* JSX can reference JS variables
