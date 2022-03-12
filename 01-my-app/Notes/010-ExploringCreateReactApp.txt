@@ -1,0 +1,9 @@
+Exploring a Create React App Project
+
+Project Directory:
+1. src - Folder where we put all the source code we write
+2. public - Folder that stores static files, like images
+3. node_modules - Folder that contains all of our project dependencies
+4. package.json - Records our project dependencies and configures our project
+5. package-lock.json - Records the exact version of packages that we install
+6. README.md - instructions on how to use this project

@@ -1,0 +1,18 @@
+JavaScript Modules System
+
+import React from 'react'
+
+import - We want to get code from some other file or dependency
+
+React - The variable we want to assign this import to
+
+from - We are about to specify the name of the library or file we are importing from
+
+'react' - The name of the dependency or path to the file we are importing
+
+
+ES2015 Modules
+import - ES2015 import statement
+
+CommonJS Modules
+require - CommonJS import statement

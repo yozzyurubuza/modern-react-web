@@ -1,0 +1,6 @@
+Displaying Content With Functional Components
+
+A component is a:
+- Function or Class
+- that produces HTML to show the user (Using JSX)
+- and handles feedback from the user (Using Event Handlers)
