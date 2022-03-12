@@ -1,0 +1,41 @@
+Critical Questions:
+Link: https://codesandbox.io/s/react-jg4cq
+
+1. What was that 'App' function?
+* The App function is a React component
+* App Component - Produces JSX and handles user events
+       -> Returns...
+      JSX - Set of instructions to tell React what content 
+
+JSX Elements
+* Tell React to create a normal HTML element (div, span, h1, table, hr, input)
+* Tell React to show another component (Field, Translate, Languages)
+
+Sample Return JSX Scenario:
+* Is this a DOM Element? -> Yes -> OK, show a div on the screen to the user.
+* Is this a DOM Element? -> No, it is a component -> OK, call the component function and inspect all the JSX we get back.
+
+
+2. How did some content get displayed on the screen?
+
+ReactDOM.render(
+    <App /> // Call the App function, get back JSX, and turn it into HTML
+    document.getElementById("root") // Then take that HTML and put it into the DOM inside this div (./public/index.html)
+)
+
+
+3. What's the difference between React and ReactDOM?
+* React - Knows how to work with components
+        - Called a 'reconciler'
+
+* ReactDOM - Knows how to take instructions on what we want to
+             show and turn it into HTML.
+           - Called a 'renderer'
+          
+
+4. What was all the 'useState' stuff?
+* useState - Function for working with React's 'state' system
+           - State is used to keep track of data that changes over time
+           - Used to make React update the HTML on the screen
+
+
