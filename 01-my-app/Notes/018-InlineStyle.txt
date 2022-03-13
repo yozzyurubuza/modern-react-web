@@ -11,4 +11,9 @@ JSX - <div style={{backgroundColor: 'red'}}></div>
 
 * Adding a class to an element uses different syntax
 
+JSX = className / JS = class
+
+- The reason for this is because we don't want JavaScript to get confused and think that we are trying to define a new JavaScript class in the JSX line.
+
+
 * JSX can reference JS variables

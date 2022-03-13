@@ -4,11 +4,13 @@ import ReactDOM from "react-dom";
 
 // const React = require('react'); // CommonJS import statement
 
+// class App extends React.Component
+
 // Create a react component
 const App = function () {
   return (
     <div>
-      <label class="label" for="name">
+      <label className="label" for="name">
         Enter name:
       </label>
       <input id="name" type="text" />
