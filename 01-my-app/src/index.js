@@ -2,6 +2,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+function getButtonText() {
+  return "Click on me!";
+}
+
 // const React = require('react'); // CommonJS import statement
 
 // class App extends React.Component
@@ -15,7 +19,7 @@ const App = function () {
       </label>
       <input id="name" type="text" />
       <button style={{ backgroundColor: "blue", color: "white" }}>
-        Submit
+        {getButtonText()}
       </button>
     </div>
   );
