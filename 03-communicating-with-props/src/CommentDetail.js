@@ -19,3 +19,5 @@ const CommentDetail = function () {
     </div>
   );
 };
+
+export default CommentDetail;
