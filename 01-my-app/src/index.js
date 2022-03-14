@@ -12,9 +12,10 @@ const App = function () {
   const buttonText = { text: "Click me" };
   const labelText = "Enter name: ";
 
+  //If console returns a warning message with "Did you mean" means there is an invalid property in the JSX.
   return (
     <div>
-      <label className="label" for="name">
+      <label className="label" htmlFor="name">
         {labelText}
       </label>
       <input id="name" type="text" />
