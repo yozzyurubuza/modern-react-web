@@ -1,0 +1,29 @@
+How React Used to Be (React in the Past)
+
+Functional Components
+- Can produce JSX to show content to the user
+
+Class Components
+- Can produce JSX to show content to the user
+- Can use the Lifecycle Method system to run code at specific points in time
+- Can use the 'state' system to update content on the screen
+
+
+How React is Now
+
+Class Components
+- Can produce JSX to show content to the user
+- Can use the Lifecycle Method system to run code at specific points in time
+- Can use the 'state' system to update content on the screen
+
+Function Components (Hooks System)
+- Can produce JSX to show content to the user
+- Can use Hooks to run code at specific points in time
+- Can use Hooks to access state system and update content on screen
+
+
+Class Components or Functions Components?
+
+* Companies with established projects are using Class-based components
+
+* Companiess with newer projects may be using Class-based or Function-based components
