@@ -7,7 +7,9 @@ const App = function () {
   return (
     <div className="ui container comments">
       {/* Syntax for calling CommentDetail */}
-      <CommentDetail />
+      <CommentDetail author="Sam" />
+      <CommentDetail author="Alex" />
+      <CommentDetail author="Jane" />
     </div>
   );
 };

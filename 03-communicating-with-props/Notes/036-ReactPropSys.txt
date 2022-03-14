@@ -1,0 +1,27 @@
+Component Hierarchy
+
+App
+
+1. Comment Detail
+    Props: Show a name of 'Alex'
+
+2. Comment Detail
+    Props: Show a name of 'Jane'
+
+3. Comment Detail
+    Props: Show a name of 'Sam'
+
+
+Props (Properties)
+
+1. System for passing data from a parent component to a child component
+
+2. Goal is to customize or configure a child component
+
+*Providing props from parent to child
+
+<CommentDetail author= "Sam" />
+
+author = Name of the prop
+"Sam" = Value of the prop
+
