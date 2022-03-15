@@ -1,0 +1,19 @@
+Introducing Lifecycle Methods
+
+Component Lifecycle
+
+Timeline:
+
+1. Constructor - optional
+
+2. Render - not optional, need to define
+    - Content Visible on screen
+
+3. componentDidMount 
+    - Can put code inside to set up or do some initial data loading.
+    - Sit and wait for updates... (setState)
+
+4. componentDidUpdate
+    - Sit and wait until this component is not longer shown
+
+5. componentWillUnmount - stop showing component / cleanup
