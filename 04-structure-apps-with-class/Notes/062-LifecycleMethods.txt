@@ -5,15 +5,30 @@ Component Lifecycle
 Timeline:
 
 1. Constructor - optional
+    - Good place to do one-time setup
 
 2. Render - not optional, need to define
+    - Avoid doing anything besides returning JSX
     - Content Visible on screen
-
+    
 3. componentDidMount 
     - Can put code inside to set up or do some initial data loading.
-    - Sit and wait for updates... (setState)
+    - Good place to do data-loading!
+    - It has similar function with Constructor but data loading is recommended to be placed here for cleaner code.
+
+* Sit and wait for updates... (setState)
 
 4. componentDidUpdate
-    - Sit and wait until this component is not longer shown
+    - Good place to do more data-loading when state/props change
+
+* Sit and wait until this component is not longer shown
 
 5. componentWillUnmount - stop showing component / cleanup
+    - Good place to do cleanup (especially for non-React stuff)
+
+
+Other lifecycle methods (rarely used)
+
+* shouldComponentUpdate
+* getDerivedStateFromProps
+* getSnapshotBeforeUpdate
