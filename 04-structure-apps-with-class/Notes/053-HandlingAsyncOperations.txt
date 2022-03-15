@@ -1,0 +1,8 @@
+Timeline:
+
+1. JS file loaded by browser
+2. App component gets created
+3. We call geolocation service
+4. App returns JSX, gets rendered to page as HTML
+...
+5. We get result of geolocation!
