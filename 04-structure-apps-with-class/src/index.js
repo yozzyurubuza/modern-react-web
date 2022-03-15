@@ -2,12 +2,15 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 class App extends React.Component {
-  constructor(props) {
-    super(props); //Important to always initialize props in super
-    //Initialize State
-    //THIS IS THE ONLY TIME we do direct assignment to this.state
-    this.state = { lat: null, errorMessage: "" };
-  }
+  //   constructor(props) {
+  //     super(props); //Important to always initialize props in super
+  //     //Initialize State
+  //     //THIS IS THE ONLY TIME we do direct assignment to this.state
+  //     this.state = { lat: null, errorMessage: "" };
+  //   }
+
+  //Alternate State Initialization
+  state = { lat: null, errorMessage: "" };
 
   componentDidMount() {
     //To update state object, always use 'setState' only
