@@ -1,0 +1,10 @@
+Benefits of Class Components
+
+1. Easier code organization
+
+2. Can use 'state' (Another React system)
+    - Easier to handle user input
+
+3. Understands lifecycle events
+    - Easier to do things when the app first starts
+
