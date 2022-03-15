@@ -6,20 +6,20 @@ class App extends React.Component {
     super(props); //Important to always initialize props in super
     //Initialize State
     //THIS IS THE ONLY TIME we do direct assignment to this.state
-    this.state = { lat: null };
+    this.state = { lat: null, errorMessage: "" };
 
     window.navigator.geolocation.getCurrentPosition(
       (position) => {
         //To update state object, always use 'setState' only
         this.setState({ lat: position.coords.latitude });
       },
-      (err) => console.log(err)
+      (err) => this.setState({ errorMessage: err.message })
     );
   }
 
   // React says we have to define render!!
   render() {
-    return <div>Latitute: {this.state.lat}</div>;
+    return <div>Latitute: {this.state.lat || this.state.errorMessage}</div>;
   }
 }
 
