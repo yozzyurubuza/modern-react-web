@@ -1,11 +1,22 @@
 Timeline:
 
 1. JS file loaded by browser
-2. App component gets created
-3. We call geolocation service
-4. App returns JSX, gets rendered to page as HTML
+2. Instance of App component is created
+3. App components 'constructor' function gets called
+4. State object is created and assigned to the 'this.state' property
+5. We call geolocation service
+6. React calls the components render method
+7. App returns JSX, gets rendered to page as HTML
 ...
-5. We get result of geolocation!
+8. We get result of geolocation
+9. We update our state object with a call to 'this.setState'
+10. React sees that we updated the state of a component
+11. React calls our 'render' method a second time
+12. Render method returns some (updated) JSX
+13. React takes that JSX and updates content on the screen
+
+
+
 
 
 Rules of Class Components
