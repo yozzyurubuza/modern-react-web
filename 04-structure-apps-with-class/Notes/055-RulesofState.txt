@@ -1,0 +1,14 @@
+Rules of State
+
+1. Only usable with class components
+    - Technically can be used with functional components using the 'hooks' system (thing to discuss later)
+
+2. You will confuse props with State
+
+3. 'State' is a JS object that contains data relevant to a component
+
+4. Updating 'state' on a component causes the component to (almost) instantly rerender
+
+5. State must be initialized when a component is created.
+
+6. State can only be updated using the function 'setState'
