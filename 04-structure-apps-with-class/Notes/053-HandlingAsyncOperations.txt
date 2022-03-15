@@ -6,3 +6,10 @@ Timeline:
 4. App returns JSX, gets rendered to page as HTML
 ...
 5. We get result of geolocation!
+
+
+Rules of Class Components
+
+1. Must be a Javascript Class
+2. Must extend (subclass) React.Component
+3. Must define a 'render' method that returns some amount of JSX
