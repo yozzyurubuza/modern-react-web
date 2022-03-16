@@ -1,0 +1,16 @@
+Handlings Requests with Async/Await
+
+
+1. Component renders itself one time with no list of images
+
+2. onSearchSbumit method called
+
+3. Request made to unsplash
+
+4. Wait.....
+
+5. Request Complete
+
+6. Set image data on state of App Component
+
+7. App component rerenders and shows images
