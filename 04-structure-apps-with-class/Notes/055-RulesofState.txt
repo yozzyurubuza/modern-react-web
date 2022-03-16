@@ -12,3 +12,4 @@ Rules of State
 5. State must be initialized when a component is created.
 
 6. State can only be updated using the function 'setState'
+
