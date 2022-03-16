@@ -3,7 +3,9 @@ import axios from "axios"; //Put import of 3rd-party libraries above components
 import SearchBar from "./SearchBar";
 
 class App extends React.Component {
-  async onSearchSubmit(term) {
+  state = { images: [] };
+
+  onSearchSubmit = async (term) => {
     const res = await axios.get("https://api.unsplash.com/search/photos", {
       params: { query: term },
       headers: {
@@ -15,13 +17,14 @@ class App extends React.Component {
     //     console.log(res.data.results);
     //   });
 
-    console.log(res.data.results);
-  }
+    this.setState({ images: res.data.results });
+  };
 
   render() {
     return (
       <div className="ui container" style={{ marginTop: "10px" }}>
         <SearchBar onEnter={this.onSearchSubmit} />
+        Found: {this.state.images.length} images
       </div>
     );
   }
