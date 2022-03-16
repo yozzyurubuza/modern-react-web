@@ -1,0 +1,5 @@
+Creating Event Handlers
+
+onClick - User clicks on something
+onChange - User changes text in an input field
+onSubmit - User submits a form
