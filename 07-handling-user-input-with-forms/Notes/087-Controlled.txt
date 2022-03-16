@@ -1,0 +1,19 @@
+More on Controlled Elements
+
+
+Flow:
+
+1. User types in input
+
+2. Callback gets invoked (onChange)
+
+3. We call setState with the new value
+
+4. Component rerenders
+ 
+5. Input is told what its value is (coming from state)
+
+
+Difference Between Controlled and Uncontrolled
+
+* When asking the current value of the input, in controlled, the data is in the state object, which is part of React Component, while in Uncontrolled, the data is stored in the DOM and must still pull the value from there, which we do not want.
