@@ -3,19 +3,30 @@ import React from "react";
 class SearchBar extends React.Component {
   state = { term: "" };
 
-  // onChange={this.onInputChange(e)} - prop
-  //   onInputChange(e) {
-  //     console.log(e.target.value);
-  //   }
+  //Ways to fix 'this' keyword
+  //1. Use constructor
+  // constructor(props) {
+  //   super(props);
+  //   this.onFormSubmit = this.onFormSubmit.bind(this);
+  // }
 
-  onFormSubmit(e) {
+  //2. Transform into arrow function
+  onFormSubmit = (e) => {
     e.preventDefault();
-    console.log(this.state.term);
-  }
+
+    this.props.onEnter(this.state.term);
+  };
+
+  // onFormSubmit(e) {
+  //   e.preventDefault();
+  //   console.log(this.state.term);
+  // }
 
   render() {
     return (
       <div className="ui segment">
+        {/* 3. Transform into Arrow Function */}
+        {/* <form onSubmit={()=>this.onFormSubmit(e)} className="ui form"></form> */}
         <form onSubmit={this.onFormSubmit} className="ui form">
           <div className="field">
             <label>Image Search</label>
