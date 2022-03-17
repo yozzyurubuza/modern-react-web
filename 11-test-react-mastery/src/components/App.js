@@ -3,12 +3,13 @@ import SearchBar from "./SearchBar";
 import youtube from "../apis/youtube";
 import VideoList from "./VideoList";
 import VideoDetail from "./VideoDetail";
+import "./App.css";
 
 class App extends React.Component {
   state = { videos: [], selectedVideo: null };
 
   componentDidMount() {
-    this.onTermSubmit("Ragnarok Ascendance Trailer");
+    this.onTermSubmit("Ragnarok Online Trailer Animation");
   }
 
   onTermSubmit = async (term) => {
