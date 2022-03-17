@@ -1,3 +1,4 @@
+import "./ImageList.css";
 import React from "react";
 
 const ImageList = function (props) {
@@ -5,7 +6,7 @@ const ImageList = function (props) {
     //Assign key to the root of element only
     return <img alt={description} key={id} src={urls.regular} />;
   });
-  return <div>{images}</div>;
+  return <div className="image-list">{images}</div>;
 };
 
 export default ImageList;
