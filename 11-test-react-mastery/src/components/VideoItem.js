@@ -1,9 +1,10 @@
 import "./VideoItem.css";
 import React from "react";
 
-const VideoItem = function ({ video }) {
+const VideoItem = function ({ video, onVideoSelect }) {
   return (
-    <div className="video-item item">
+    //Connecting to parent component (App), use callback function (onVideoSelect)
+    <div onClick={() => onVideoSelect(video)} className="video-item item">
       <img
         className="ui image"
         alt={video.snippet.title}
