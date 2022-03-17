@@ -1,0 +1,6 @@
+Purpose of Keys in Lists
+
+List of 'To Do' Items               Rendered List
+{id: 1, task: 'Take out trash'} --> {<div>Take out trash</div>}
+{id: 2, task: 'Wash the car'} ----> {<div>Wash the car</div>}
+{id: 3, task: 'Walk the dog'} ----> {<div>Walk the dog</div>}
