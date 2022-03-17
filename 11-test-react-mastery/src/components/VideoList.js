@@ -2,7 +2,7 @@ import React from "react";
 import VideoItem from "./VideoItem";
 
 const VideoList = ({ videos, onVideoSelect }) => {
-  // props.videos
+  // Instead of props.videos and props.onVideoSelect, destructure.
   const renderedList = videos.map((video) => {
     return <VideoItem onVideoSelect={onVideoSelect} video={video} />;
   });
