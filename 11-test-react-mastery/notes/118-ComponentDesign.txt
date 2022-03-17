@@ -1,0 +1,22 @@
+Component Design
+
+1. SearchBar
+    - Show text input, user type search term, then update state.
+
+2. VideoDetail
+    - Display a video player that was fetch from youtube API
+
+3. VideoList
+    - Render entire list of videos
+
+4. VideoItem
+    - Each individual item inside the list.
+
+
+Component Hierarchy:
+
+App
+   - SearchBar
+   - VideoDetail
+   - VideoList
+        - VideoItem
