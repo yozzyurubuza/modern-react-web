@@ -1,8 +1,11 @@
 import React from "react";
 
 const ImageList = function (props) {
-  console.log(props.images);
-  return <div>ImageList</div>;
+  const images = props.images.map(({ description, id, urls }) => {
+    //Assign key to the root of element only
+    return <img alt={description} key={id} src={urls.regular} />;
+  });
+  return <div>{images}</div>;
 };
 
 export default ImageList;
