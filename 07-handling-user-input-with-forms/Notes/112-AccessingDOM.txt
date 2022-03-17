@@ -1,0 +1,18 @@
+Accessing DOM with Refs
+
+Flow:
+
+1. Let the ImageCard render itself and its image.
+
+2. Reach into the DOM and figure out the height of the image.
+
+3. Set the image height on state to get the component to renderer.
+
+4. When rerendering, assign a 'grid-row-end' to make sure the image takes up the appropriate space.
+
+
+React Refs:
+
+* Gives access to a single DOM element
+
+* We create refs in the constructor, assign them to instance variables, then pass to a particular JSX element as props.
