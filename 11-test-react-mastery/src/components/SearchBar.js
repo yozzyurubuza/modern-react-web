@@ -18,7 +18,7 @@ class SearchBar extends React.Component {
       <div className="search-bar ui segment" style={{ marginTop: 10 }}>
         <form className="ui form" onSubmit={this.onFormSubmit}>
           <div className="field">
-            <label style={{ color: "red" }}>Video Search</label>
+            <label style={{ color: "blue" }}>Video Search</label>
             <input
               type="text"
               onChange={this.onInputChange}
