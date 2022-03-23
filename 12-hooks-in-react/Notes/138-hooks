@@ -1,0 +1,26 @@
+The Hooks System
+
+useState - function that lets you use state in a functional component
+
+useEffect - function that lets you use something like lifecycle methods in a functional component
+
+useRef - function that lets you create a 'ref' in a function component
+
+* Hooks are a way to write a reusable code, instead of more classic techniques like Inheritance.
+
+Primitive Hooks
+1. useState
+2. useEffect
+3. useContext
+4. useReducer
+5. useCallback
+6. useMemo
+7. useRef
+8. useImperativeHandle
+9. useLayoutEffect
+10. useDebugValue
+
+Custom Hooks
+1. useTranslate
+    - useState
+    - useEffect
