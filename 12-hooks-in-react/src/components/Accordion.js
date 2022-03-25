@@ -4,7 +4,6 @@ const Accordion = ({ items }) => {
   //Assign useState(null) to the 2 elements.
   // setActiveIndex - function to update state, re-render
   const [activeIndex, setActiveIndex] = useState(null);
-  const [lastActive, setLastActive] = useState(null);
 
   const onTitleClick = (index) => {
     //After running this code, component will re-render by going back on top.
