@@ -1,0 +1,17 @@
+The 'useEffect' Hook
+
+* Allows function components to use something like lifecycle methods
+
+* We configure the hook to run some code automatically in one of three scenarios
+    1. When the component is rendered for the first time only
+    2. When the component is rendered for the first time and whenever it rerenders
+    3. When the component is rendered for the first time and (whenever it rerenders and some piece of data has changed)
+
+
+UseEffect Second Argument
+
+[] - Run at initial render
+
+..nothing.. - Run at initial render > Run after every rerender
+
+[data] - Run at initial > Run after every rerender if data has changed since last rerender.
