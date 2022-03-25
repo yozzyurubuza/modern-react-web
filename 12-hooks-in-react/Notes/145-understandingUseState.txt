@@ -1,0 +1,18 @@
+Class Component vs Function Component
+
+Initialization:
+state = { activeIndex: 0 };
+
+useState(0);
+
+
+Reference:
+this.state.activeIndex
+
+activeIndex;
+
+
+Updates:
+this.setState({ activeIndex: 10 })
+
+setActiveIndex(10);
