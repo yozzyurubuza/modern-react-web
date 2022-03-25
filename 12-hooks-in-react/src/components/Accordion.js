@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 
 const Accordion = ({ items }) => {
+  //Assign useState(null) to the 2 elements.
+  // setActiveIndex - function to update state, re-render
   const [activeIndex, setActiveIndex] = useState(null);
 
   const onTitleClick = (index) => {
