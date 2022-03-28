@@ -10,17 +10,16 @@ const Search = () => {
   useEffect(() => {
     //1. Create a new variable
     const search = async () => {
-      await axios.get("adssadas");
+      await axios.get("https://en.wikipedia.org/w/api.php", {
+        params: {
+          action: "query",
+          list: "search",
+          origin: "*",
+          format: "json",
+          srsearch: term,
+        },
+      });
     };
-    //2. Immediately Invoked Function Expression
-    (async () => {
-      await axios.get("adssadas");
-    })();
-
-    //3. Normal promises
-    axios.get("asdsadsa").then((res) => {
-      console.log(res);
-    });
   }, [term]);
 
   return (
