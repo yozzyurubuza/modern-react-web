@@ -30,7 +30,8 @@ const Search = () => {
       <div className="item" key={result.pageid}>
         <div className="content">
           <div className="header">{result.title}</div>
-          {result.snippet}
+          {/* Process HTML text in JSX */}
+          <span dangerouslySetInnerHTML={{ __html: result.snippet }}></span>
         </div>
       </div>
     );
