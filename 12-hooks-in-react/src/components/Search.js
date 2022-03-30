@@ -5,9 +5,9 @@ const Search = () => {
   const [term, setTerm] = useState("programming");
   const [results, setResults] = useState([]);
 
-  //Cannot use async in useEffect
+  //Cannot use async directly on useEffect
   useEffect(() => {
-    //1. Create a new variable
+    //Can create a new variable forr async
     const search = async () => {
       const { data } = await axios.get("https://en.wikipedia.org/w/api.php", {
         params: {
@@ -28,9 +28,17 @@ const Search = () => {
   const renderedResults = results.map((result) => {
     return (
       <div className="item" key={result.pageid}>
+        <div className="right floated content">
+          <a
+            className="ui button"
+            href={`https://en.wikipedia.org?curid=${result.pageid}`}
+          >
+            Go
+          </a>
+        </div>
         <div className="content">
           <div className="header">{result.title}</div>
-          {/* Process HTML text in JSX */}
+          {/* Process HTML code text in JSX */}
           <span dangerouslySetInnerHTML={{ __html: result.snippet }}></span>
         </div>
       </div>
