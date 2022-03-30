@@ -22,13 +22,19 @@ const Search = () => {
       setResults(data.query.search);
     };
 
-    const timeoutId = setTimeout(() => {
-      if (term) search();
-    }, 500);
+    // Do search immediately at initial render
+    if (term && !results.length) {
+      search();
+    } else {
+      //Then put delay on search request per input
+      const timeoutId = setTimeout(() => {
+        if (term) search();
+      }, 500);
 
-    return () => {
-      clearTimeout(timeoutId);
-    };
+      return () => {
+        clearTimeout(timeoutId);
+      };
+    }
   }, [term]);
 
   const renderedResults = results.map((result) => {
