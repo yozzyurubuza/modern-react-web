@@ -5,32 +5,32 @@ const Search = () => {
   const [term, setTerm] = useState("programming");
   const [results, setResults] = useState([]);
 
-  //Cannot use async directly on useEffect
+  const fetchWiki = async () => {
+    const { data } = await axios.get("https://en.wikipedia.org/w/api.php", {
+      params: {
+        action: "query",
+        list: "search",
+        origin: "*",
+        format: "json",
+        srsearch: term,
+      },
+    });
+
+    setResults(data.query.search);
+  };
+
+  //Cannot use async directly on useEffect, but can use async from other variable
   useEffect(() => {
-    //Can create a new variable for async
-    const search = async () => {
-      const { data } = await axios.get("https://en.wikipedia.org/w/api.php", {
-        params: {
-          action: "query",
-          list: "search",
-          origin: "*",
-          format: "json",
-          srsearch: term,
-        },
-      });
-
-      setResults(data.query.search);
-    };
-
     // Do search immediately at initial render
     if (term && !results.length) {
-      search();
+      fetchWiki();
     } else {
       //Then put delay on search request per input
       const timeoutId = setTimeout(() => {
-        if (term) search();
+        if (term) fetchWiki();
       }, 500);
 
+      // Return in useEffect will execute at next rerender.
       return () => {
         clearTimeout(timeoutId);
       };
