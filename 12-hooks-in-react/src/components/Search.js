@@ -7,7 +7,7 @@ const Search = () => {
 
   //Cannot use async directly on useEffect
   useEffect(() => {
-    //Can create a new variable forr async
+    //Can create a new variable for async
     const search = async () => {
       const { data } = await axios.get("https://en.wikipedia.org/w/api.php", {
         params: {
