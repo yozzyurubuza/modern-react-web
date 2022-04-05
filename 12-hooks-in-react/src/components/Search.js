@@ -3,39 +3,42 @@ import axios from "axios";
 
 const Search = () => {
   const [term, setTerm] = useState("programming");
+  const [debouncedTerm, setDebouncedTerm] = useState(term);
   const [results, setResults] = useState([]);
 
-  const fetchWiki = async () => {
-    const { data } = await axios.get("https://en.wikipedia.org/w/api.php", {
-      params: {
-        action: "query",
-        list: "search",
-        origin: "*",
-        format: "json",
-        srsearch: term,
-      },
-    });
-
-    setResults(data.query.search);
-  };
-
-  //Cannot use async directly on useEffect, but can use async from other variable
+  //Run when term changes (When user is still typing in the search bar)
+  //useEffect always runs at page first execute.
   useEffect(() => {
-    // Do search immediately at initial render
-    if (term && !results.length) {
-      fetchWiki();
-    } else {
-      //Then put delay on search request per input
-      const timeoutId = setTimeout(() => {
-        if (term) fetchWiki();
-      }, 500);
+    const timerId = setTimeout(() => {
+      //Update debouncedTerm using term
+      setDebouncedTerm(term);
+    }, 1000);
 
-      // Return in useEffect will execute at next rerender.
-      return () => {
-        clearTimeout(timeoutId);
-      };
-    }
+    //Clean-up function
+    //Do not run setDebouncedTerm when user is still typing
+    return () => {
+      clearTimeout(timerId);
+    };
   }, [term]);
+
+  //Run 2nd useEffect when debouncedTerm has been updated
+  //Fetch data from wiki using the debouncedTerm
+  useEffect(() => {
+    const search = async () => {
+      const { data } = await axios.get("https://en.wikipedia.org/w/api.php", {
+        params: {
+          action: "query",
+          list: "search",
+          origin: "*",
+          format: "json",
+          srsearch: debouncedTerm,
+        },
+      });
+
+      setResults(data.query.search);
+    };
+    search();
+  }, [debouncedTerm]);
 
   const renderedResults = results.map((result) => {
     return (
