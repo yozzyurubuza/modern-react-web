@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from "react";
+import { TIME } from "../Config";
 
 const Timer = ({ time, setTime }) => {
   const [timeString, setTimeString] = useState(time);
 
-  //Decrement given time
+  //Decrement given time from parent component
   useEffect(() => {
     const decTimeId = setInterval(() => {
       setTime(time - 1);
     }, 1000);
 
-    if (time === 0) {
-      setTime(18);
-    }
+    // Reset timer back to default
+    if (time === 0) setTime(TIME);
 
     //Remove instance of setInterval when the time value has changed.
     return () => {

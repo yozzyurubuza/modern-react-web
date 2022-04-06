@@ -3,43 +3,14 @@ import Accordion from "./components/Accordion";
 import Search from "./components/Search";
 import Dropdown from "./components/Dropdown";
 import Timer from "./components/Timer";
-
-const items = [
-  {
-    title: "What is React?",
-    content: "React is a front end javascript framework",
-  },
-  {
-    title: "Why use React?",
-    content: "React is a favorite JS library among engineers",
-  },
-  {
-    title: "How do you use React?",
-    content: "You use React by creating components",
-  },
-];
-
-const options = [
-  {
-    label: "The Color Red",
-    value: "red",
-  },
-  {
-    label: "The Color Green",
-    value: "green",
-  },
-  {
-    label: "A Shade of Blue",
-    value: "blue",
-  },
-];
+import { TIME, OPTIONS, ITEMS, SHOWCOMPONENT } from "./Config";
 
 const App = () => {
-  const [selected, setSelected] = useState(options[0]);
-  const [showDropdown, setShowDropdown] = useState(true);
+  const [selected, setSelected] = useState(OPTIONS[0]);
+  const [showDropdown, setShowDropdown] = useState(SHOWCOMPONENT);
 
-  const [showTimer, setShowTimer] = useState(true);
-  const [time, setTime] = useState(18);
+  const [showTimer, setShowTimer] = useState(SHOWCOMPONENT);
+  const [time, setTime] = useState(TIME);
 
   return (
     <div>
@@ -49,7 +20,7 @@ const App = () => {
       <button
         onClick={() => {
           setShowTimer(!showTimer);
-          setTime(18);
+          setTime(TIME);
         }}
       >
         Toggle Timer
@@ -58,7 +29,7 @@ const App = () => {
         <Dropdown
           selected={selected}
           onSelectedChange={setSelected}
-          options={options}
+          options={OPTIONS}
         />
       ) : null}
 
