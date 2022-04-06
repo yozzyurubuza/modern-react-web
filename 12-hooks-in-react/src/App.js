@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Accordion from "./components/Accordion";
 import Search from "./components/Search";
 import Dropdown from "./components/Dropdown";
+import Timer from "./components/Timer";
 
 const items = [
   {
@@ -37,10 +38,21 @@ const App = () => {
   const [selected, setSelected] = useState(options[0]);
   const [showDropdown, setShowDropdown] = useState(true);
 
+  const [showTimer, setShowTimer] = useState(true);
+  const [time, setTime] = useState(18);
+
   return (
     <div>
       <button onClick={() => setShowDropdown(!showDropdown)}>
         Toggle Dropdown
+      </button>
+      <button
+        onClick={() => {
+          setShowTimer(!showTimer);
+          setTime(18);
+        }}
+      >
+        Toggle Timer
       </button>
       {showDropdown ? (
         <Dropdown
@@ -49,6 +61,8 @@ const App = () => {
           options={options}
         />
       ) : null}
+
+      <div>{showTimer ? <Timer time={time} setTime={setTime} /> : null}</div>
     </div>
   );
 };
