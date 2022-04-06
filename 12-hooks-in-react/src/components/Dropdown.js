@@ -5,11 +5,12 @@ const Dropdown = ({ options, selected, onSelectedChange }) => {
   const ref = useRef();
 
   useEffect(() => {
+    //Create event listener at body to determine when the user clicked outside the dropdown component
     document.body.addEventListener("click", (event) => {
-      if (ref.current.contains(event.target)) {
-        return;
-      }
+      // If user click in the dropdown, do nothing in this function.
+      if (ref.current.contains(event.target)) return;
 
+      // If user click somewhere outside the dropdown, attempt to close the dropdown.
       setOpen(false);
     });
   }, []);
@@ -32,6 +33,7 @@ const Dropdown = ({ options, selected, onSelectedChange }) => {
   console.log(ref.current);
 
   return (
+    //useRef makes a reference for the DOM element that it is attached to. (In this case, the topmost div)
     <div ref={ref} className="ui form">
       <div className="field">
         <label className="label">Select a Color</label>
