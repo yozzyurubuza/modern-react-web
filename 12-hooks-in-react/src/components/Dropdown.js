@@ -4,15 +4,15 @@ const Dropdown = ({ options, selected, onSelectedChange }) => {
   const [open, setOpen] = useState(false);
   const ref = useRef();
 
+  const onBodyClick = (event) => {
+    // If user click in the dropdown, do nothing in this function.
+    if (ref.current.contains(event.target)) return;
+
+    // If user click somewhere outside the dropdown, attempt to close the dropdown.
+    setOpen(false);
+  };
+
   useEffect(() => {
-    const onBodyClick = (event) => {
-      // If user click in the dropdown, do nothing in this function.
-      if (ref.current.contains(event.target)) return;
-
-      // If user click somewhere outside the dropdown, attempt to close the dropdown.
-      setOpen(false);
-    };
-
     //Create event listener at body to determine when the user clicked outside the dropdown component
     document.body.addEventListener("click", onBodyClick, { capture: true });
 
