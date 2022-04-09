@@ -8,10 +8,12 @@ import "./App.css";
 class App extends React.Component {
   state = { videos: [], selectedVideo: null };
 
+  //Initial Search Results - Display on the website upon loading
   componentDidMount() {
     this.onTermSubmit("Ragnarok Online Trailer Animation");
   }
 
+  //Async function to fetch data from youtube API
   onTermSubmit = async (term) => {
     const res = await youtube.get("/search", {
       params: {
@@ -19,13 +21,16 @@ class App extends React.Component {
       },
     });
 
+    //Put the search results fetched from youtube API to state, then set the first video as selected video
     this.setState({ videos: res.data.items, selectedVideo: res.data.items[0] });
   };
 
+  //Set video selected from the right list to active video
   onVideoSelect = (video) => {
     this.setState({ selectedVideo: video });
   };
 
+  //Render components
   render() {
     return (
       <div className="ui container">

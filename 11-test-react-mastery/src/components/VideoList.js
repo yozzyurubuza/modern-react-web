@@ -3,6 +3,7 @@ import VideoItem from "./VideoItem";
 
 const VideoList = ({ videos, onVideoSelect }) => {
   // Instead of props.videos and props.onVideoSelect, destructure.
+  // Map the results from video array to display video details into the video list
   const renderedList = videos.map((video) => {
     return (
       <VideoItem
