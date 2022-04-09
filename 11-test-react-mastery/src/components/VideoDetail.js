@@ -8,7 +8,7 @@ const VideoDetail = function ({ video }) {
   const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`;
 
   //Embed a video player using iframe tag
-  //ui segment to put a simple title and description below
+  //ui segment to put a simple title and description below.
   return (
     <div>
       <div className="ui embed">
