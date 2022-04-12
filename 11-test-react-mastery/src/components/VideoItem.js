@@ -13,7 +13,9 @@ const VideoItem = function ({ video, onVideoSelect }) {
         src={video.snippet.thumbnails.medium.url}
       />
       <div className="content">
-        <div className="header">{video.snippet.title}</div>
+        <div className="header" style={{ fontSize: "min(2vw, 14px)" }}>
+          {video.snippet.title}
+        </div>
       </div>
     </div>
   );
