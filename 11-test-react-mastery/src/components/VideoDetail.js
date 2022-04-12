@@ -1,8 +1,8 @@
 import React from "react";
 
-const VideoDetail = function ({ video }) {
+const VideoDetail = function ({ video, loadingMsg }) {
   //Return immediately in case video is null
-  if (!video) return <div>Loading....</div>;
+  if (!video) return <div>{loadingMsg}</div>;
 
   //Process fetched data and put into URL
   const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`;
