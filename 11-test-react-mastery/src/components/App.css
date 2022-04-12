@@ -1,7 +1,7 @@
 body {
   background-image: url("https://i.ibb.co/rcyn0rs/ro-background.jpg") !important;
-  object-fit: fill !important;
-  background-size: 100% 100% !important;
-  background-attachment: fixed !important;
-  background-repeat: no-repeat !important;
+  object-fit: fill;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
