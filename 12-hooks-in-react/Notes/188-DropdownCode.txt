@@ -8,6 +8,7 @@ const [showDropdown, setShowDropdown] = useState(SHOWCOMPONENT);
 </button>
       {showDropdown ? (
         <Dropdown
+          label="Select a Color"
           selected={selected}
           onSelectedChange={setSelected}
           options={OPTIONS}
