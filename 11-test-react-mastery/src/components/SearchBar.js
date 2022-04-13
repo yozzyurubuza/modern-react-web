@@ -3,10 +3,12 @@ import React from "react";
 class SearchBar extends React.Component {
   state = { term: "" };
 
+  //Set state into term
   onInputChange = (e) => {
     return this.setState({ term: e.target.value });
   };
 
+  //Trigger search using the keyword typed in the search bar
   onFormSubmit = (e) => {
     e.preventDefault();
 
@@ -20,6 +22,7 @@ class SearchBar extends React.Component {
           <div className="field">
             <label>Video Search</label>
             <input
+              placeholder="Search here..."
               type="text"
               onChange={this.onInputChange}
               value={this.state.term}
