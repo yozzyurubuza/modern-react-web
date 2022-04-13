@@ -32,6 +32,14 @@ export const OPTIONS_LANG = [
     label: "Hindi",
     value: "hi",
   },
+  {
+    label: "Korean",
+    value: "ko",
+  },
+  {
+    label: "Japanese",
+    value: "ja",
+  },
 ];
 
 export const ITEMS = [
@@ -48,3 +56,10 @@ export const ITEMS = [
     content: "You use React by creating components",
   },
 ];
+
+//Google Translate API key (works only in localhost:3000)
+
+export const GT_KEY = "AIzaSyCHUCmpR7cT_yDFHC98CZJy2LTms-IwDlM";
+
+export const GT_LINK =
+  "https://translation.googleapis.com/language/translate/v2";

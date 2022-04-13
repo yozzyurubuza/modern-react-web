@@ -3,10 +3,16 @@ import Dropdown from "./Dropdown";
 import Convert from "./Convert";
 import { OPTIONS_LANG } from "../Config";
 
+//Translate Dropdown Component
 const Translate = () => {
+  //Use first language as default and empty string as default text value
   const [language, setLanguage] = useState(OPTIONS_LANG[0]);
   const [text, setText] = useState("");
 
+  //Display:
+  //1. Input text field and then pass the value to text.
+  //2. Dropdown Component with list of languages to translate.
+  //3. Convert Component that will display the translated text from input text field.
   return (
     <div>
       <div className="ui form">
