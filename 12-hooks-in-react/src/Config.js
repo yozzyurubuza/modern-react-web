@@ -19,6 +19,21 @@ export const OPTIONS = [
   },
 ];
 
+export const OPTIONS_LANG = [
+  {
+    label: "Afrikaans",
+    value: "af",
+  },
+  {
+    label: "Arabic",
+    value: "ar",
+  },
+  {
+    label: "Hindi",
+    value: "hi",
+  },
+];
+
 export const ITEMS = [
   {
     title: "What is React?",
