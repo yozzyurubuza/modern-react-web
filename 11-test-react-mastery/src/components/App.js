@@ -3,7 +3,7 @@ import SearchBar from "./SearchBar";
 import youtube from "../apis/youtube";
 import VideoList from "./VideoList";
 import VideoDetail from "./VideoDetail";
-import "./App.css";
+import "../css/App.css";
 
 class App extends React.Component {
   state = { videos: [], selectedVideo: null, loadingMsg: "Loading..." };

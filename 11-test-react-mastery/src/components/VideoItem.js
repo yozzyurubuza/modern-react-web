@@ -1,4 +1,4 @@
-import "./VideoItem.css";
+import "../css/VideoItem.css";
 import React from "react";
 
 //Pass onVideoSelect function from parent component (App)
