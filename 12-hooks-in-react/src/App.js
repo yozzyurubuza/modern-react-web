@@ -3,6 +3,7 @@ import Accordion from "./components/Accordion";
 import Search from "./components/Search";
 import Dropdown from "./components/Dropdown";
 import Timer from "./components/Timer";
+import Translate from "./components/Translate";
 import { TIME, OPTIONS, ITEMS, SHOWCOMPONENT } from "./Config";
 
 const App = () => {
@@ -14,6 +15,15 @@ const App = () => {
       <button onClick={() => setShowDropdown(!showDropdown)}>
         Toggle Dropdown
       </button>
+      {showDropdown ? (
+        <Dropdown
+          selected={selected}
+          onSelectedChange={setSelected}
+          options={OPTIONS}
+        />
+      ) : null}
+
+      <Translate />
     </div>
   );
 };

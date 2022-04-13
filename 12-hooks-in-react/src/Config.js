@@ -1,6 +1,6 @@
 //User-defined Constants
 
-export const SHOWCOMPONENT = true;
+export const SHOWCOMPONENT = false;
 
 export const TIME = 18;
 
