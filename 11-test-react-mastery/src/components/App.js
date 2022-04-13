@@ -43,7 +43,7 @@ class App extends React.Component {
   //Render components
   render() {
     return (
-      <div className="ui container custom">
+      <div className="ui container">
         <SearchBar onEnter={this.onTermSubmit} />
         <div className="ui grid">
           <div className="ui row">
