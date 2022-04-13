@@ -1,6 +1,6 @@
 //User-defined Constants
 
-export const SHOWCOMPONENT = true;
+export const SHOWCOMPONENT = false;
 
 export const TIME = 18;
 
@@ -19,6 +19,29 @@ export const OPTIONS = [
   },
 ];
 
+export const OPTIONS_LANG = [
+  {
+    label: "Afrikaans",
+    value: "af",
+  },
+  {
+    label: "Arabic",
+    value: "ar",
+  },
+  {
+    label: "Hindi",
+    value: "hi",
+  },
+  {
+    label: "Korean",
+    value: "ko",
+  },
+  {
+    label: "Japanese",
+    value: "ja",
+  },
+];
+
 export const ITEMS = [
   {
     title: "What is React?",
@@ -33,3 +56,10 @@ export const ITEMS = [
     content: "You use React by creating components",
   },
 ];
+
+//Google Translate API key (works only in localhost:3000)
+
+export const GT_KEY = "AIzaSyCHUCmpR7cT_yDFHC98CZJy2LTms-IwDlM";
+
+export const GT_LINK =
+  "https://translation.googleapis.com/language/translate/v2";

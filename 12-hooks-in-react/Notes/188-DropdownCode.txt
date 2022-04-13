@@ -1,0 +1,16 @@
+//Old Code for the Dropdown component inside App Component
+
+const [selected, setSelected] = useState(OPTIONS[0]);
+const [showDropdown, setShowDropdown] = useState(SHOWCOMPONENT);
+
+<button onClick={() => setShowDropdown(!showDropdown)}>
+        Toggle Dropdown
+</button>
+      {showDropdown ? (
+        <Dropdown
+          label="Select a Color"
+          selected={selected}
+          onSelectedChange={setSelected}
+          options={OPTIONS}
+        />
+      ) : null}
