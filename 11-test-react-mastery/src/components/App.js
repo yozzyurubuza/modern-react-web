@@ -4,13 +4,14 @@ import youtube from "../apis/youtube";
 import VideoList from "./VideoList";
 import VideoDetail from "./VideoDetail";
 import "../css/App.css";
+import { LIMIT_MSG, INITIAL_SEARCH_TERM } from "./config";
 
 class App extends React.Component {
   state = { videos: [], selectedVideo: null, loadingMsg: "Loading..." };
 
   //Initial Search Results - Display on the website upon loading
   componentDidMount() {
-    this.onTermSubmit("Ragnarok Online Trailer Animation");
+    this.onTermSubmit(INITIAL_SEARCH_TERM);
   }
 
   //Async function to fetch data from youtube API
@@ -28,10 +29,9 @@ class App extends React.Component {
         selectedVideo: res.data.items[0],
       });
     } catch (err) {
-      this.loadingMsg.setState(
-        "Youtube API Daily Limit Exceeded, try again tomorrow."
-      );
-      console.log(this.state.loadingMsg);
+      this.setState({
+        loadingMsg: LIMIT_MSG,
+      });
     }
   };
 
