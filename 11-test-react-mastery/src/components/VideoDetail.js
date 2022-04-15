@@ -1,4 +1,5 @@
 import React from "react";
+import "../css/App.css";
 
 const VideoDetail = function ({ video, loadingMsg }) {
   //Return immediately in case video is null
@@ -16,9 +17,7 @@ const VideoDetail = function ({ video, loadingMsg }) {
       </div>
       <div className="ui segment">
         <h4>{video.snippet.title}</h4>
-        <p style={{ fontSize: "min(2vw, 14px)" }}>
-          {video.snippet.description}
-        </p>
+        <p className="vid-description">{video.snippet.description}</p>
       </div>
     </div>
   );

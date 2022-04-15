@@ -7,3 +7,7 @@
 .video-item.item img {
   max-width: 50%;
 }
+
+.header {
+  font-size: min(2vw, 14px);
+}

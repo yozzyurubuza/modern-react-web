@@ -5,3 +5,11 @@
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
+
+.vid-description {
+  font-size: min(1.9vw, 14px);
+}
+
+.search-bar.ui.segment {
+  margin-top: 10px;
+}
