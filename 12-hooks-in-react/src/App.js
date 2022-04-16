@@ -5,23 +5,8 @@ import Dropdown from "./components/Dropdown";
 import Timer from "./components/Timer";
 import Translate from "./components/Translate";
 import Route from "./components/Route";
+import Header from "./components/Header";
 import { TIME, OPTIONS, ITEMS, SHOWCOMP } from "./Config";
-
-const showAccordion = () => {
-  if (window.location.pathname === "/") return <Accordion items={ITEMS} />;
-};
-
-const showList = () => {
-  if (window.location.pathname === "/list") return <Search />;
-};
-
-const showDropdown = () => {
-  if (window.location.pathname === "/dropdown") return <Dropdown />;
-};
-
-const showTranslate = () => {
-  if (window.location.pathname === "/translate") return <Translate />;
-};
 
 const App = () => {
   const [selected, setSelected] = useState(OPTIONS[0]);
@@ -29,6 +14,7 @@ const App = () => {
   //The inner element in the Route tag is provided as "children" prop
   return (
     <div>
+      <Header />
       <Route path="/">
         <Accordion items={ITEMS} />
       </Route>
