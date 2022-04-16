@@ -4,7 +4,8 @@ import Search from "./components/Search";
 import Dropdown from "./components/Dropdown";
 import Timer from "./components/Timer";
 import Translate from "./components/Translate";
-import { TIME, OPTIONS, ITEMS, SHOWCOMPONENT } from "./Config";
+import Route from "./components/Route";
+import { TIME, OPTIONS, ITEMS, SHOWCOMP } from "./Config";
 
 const showAccordion = () => {
   if (window.location.pathname === "/") return <Accordion items={ITEMS} />;
@@ -23,12 +24,28 @@ const showTranslate = () => {
 };
 
 const App = () => {
+  const [selected, setSelected] = useState(OPTIONS[0]);
+
+  //The inner element in the Route tag is provided as "children" prop
   return (
     <div>
-      {showAccordion()}
-      {showList()}
-      {showDropdown()}
-      {showTranslate()}
+      <Route path="/">
+        <Accordion items={ITEMS} />
+      </Route>
+      <Route path="/list">
+        <Search />
+      </Route>
+      <Route path="/dropdown">
+        <Dropdown
+          label="Select a color"
+          options={OPTIONS}
+          selected={selected}
+          onSelectedChange={setSelected}
+        />
+      </Route>
+      <Route path="/translate">
+        <Translate />
+      </Route>
     </div>
   );
 };
